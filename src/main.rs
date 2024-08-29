@@ -2,17 +2,19 @@ use clap::{command, Arg};
 use qdir::make_dir;
 
 fn main() {
-    let matches = command!() // requires `cargo` feature
+    let matches = command!()
         .arg(
             Arg::new("depth")
                 .short('d')
                 .long("depth")
+                .value_parser(clap::value_parser!(u8))
                 .default_value("0"),
         )
         .arg(
             Arg::new("length")
                 .short('l')
                 .long("length")
+                .value_parser(clap::value_parser!(usize))
                 .default_value("6"),
         )
         .arg(
