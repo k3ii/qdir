@@ -33,20 +33,29 @@ fn main() {
         )
         .get_matches();
 
-    let length = matches
-        .get_one::<String>("length")
-        .expect("Length is required")
-        .parse::<usize>()
-        .expect("Length must be a valid number");
-
     let depth = matches
-        .get_one::<String>("depth")
-        .expect("Depth is required")
-        .parse::<u8>()
-        .expect("Depth must be a valid number");
+        .get_one::<u8>("depth")
+        .copied()
+        .expect("Default depth should be provided");
+    let length = matches
+        .get_one::<usize>("length")
+        .copied()
+        .expect("Default length should be provided");
 
     let use_name = matches.get_flag("name");
     let use_pet = matches.get_flag("pet");
 
     make_dir(depth, length, use_name, use_pet);
 }
+
+
+
+
+
+        
+
+        
+
+        
+
+        
