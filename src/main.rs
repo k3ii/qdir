@@ -15,6 +15,20 @@ fn main() {
                 .long("length")
                 .default_value("6"),
         )
+        .arg(
+            Arg::new("name")
+                .short('n')
+                .long("name")
+                .action(clap::ArgAction::SetTrue)
+                .help("Use names instead of random string"),
+        )
+        .arg(
+            Arg::new("pet")
+                .short('p')
+                .long("pet")
+                .action(clap::ArgAction::SetTrue)
+                .help("Use pets instead of random string"),
+        )
         .get_matches();
 
     let length = matches
@@ -29,5 +43,8 @@ fn main() {
         .parse::<u8>()
         .expect("Depth must be a valid number");
 
-    make_dir(depth, length);
+    let use_name = matches.contains_id("name");
+    let use_pet = matches.contains_id("pet");
+
+    make_dir(depth, length, use_name, use_pet);
 }
