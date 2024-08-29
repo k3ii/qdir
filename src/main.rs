@@ -43,8 +43,8 @@ fn main() {
         .parse::<u8>()
         .expect("Depth must be a valid number");
 
-    let use_name = matches.contains_id("name");
-    let use_pet = matches.contains_id("pet");
+    let use_name = matches.get_flag("name");
+    let use_pet = matches.get_flag("pet");
 
     make_dir(depth, length, use_name, use_pet);
 }
