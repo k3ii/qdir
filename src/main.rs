@@ -31,6 +31,13 @@ fn main() {
                 .action(clap::ArgAction::SetTrue)
                 .help("Use pets instead of random string"),
         )
+        .arg(
+            Arg::new("tmp")
+                .short('t')
+                .long("tmp")
+                .action(clap::ArgAction::SetTrue)
+                .help("Use the system's temporary directory"),
+        )
         .get_matches();
 
     let depth = matches
