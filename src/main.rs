@@ -3,6 +3,9 @@ use qdir::make_dir;
 
 fn main() {
     let matches = command!()
+        .version("0.1.0")
+        .author("Jain Ramchurn")
+        .about("Quick Directory Generator")
         .arg(
             Arg::new("depth")
                 .short('d')
