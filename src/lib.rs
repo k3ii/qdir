@@ -17,8 +17,13 @@ pub fn random(length: usize) -> String {
         .collect()
 }
 
-pub fn make_dir(depth: u8, name_length: usize, name: bool, pet: bool) {
-    let mut path = PathBuf::new();
+pub fn make_dir(depth: u8, name_length: usize, name: bool, pet: bool, tmp: bool) {
+    let mut path = if tmp {
+        std::env::temp_dir()
+    } else {
+        PathBuf::from(".")
+    };
+
     let depth = if depth == 0 { 1 } else { depth };
 
     for _ in 0..depth {

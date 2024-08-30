@@ -44,18 +44,7 @@ fn main() {
 
     let use_name = matches.get_flag("name");
     let use_pet = matches.get_flag("pet");
+    let use_tmp = matches.get_flag("tmp");
 
-    make_dir(depth, length, use_name, use_pet);
+    make_dir(depth, length, use_name, use_pet, use_tmp);
 }
-
-
-
-
-
-        
-
-        
-
-        
-
-        
