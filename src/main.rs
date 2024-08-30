@@ -3,6 +3,9 @@ use qdir::make_dir;
 
 fn main() {
     let matches = command!()
+        .version("0.1.0")
+        .author("Jain Ramchurn")
+        .about("Quick Directory Generator")
         .arg(
             Arg::new("depth")
                 .short('d')
@@ -31,6 +34,13 @@ fn main() {
                 .action(clap::ArgAction::SetTrue)
                 .help("Use pets instead of random string"),
         )
+        .arg(
+            Arg::new("tmp")
+                .short('t')
+                .long("tmp")
+                .action(clap::ArgAction::SetTrue)
+                .help("Use the system's temporary directory"),
+        )
         .get_matches();
 
     let depth = matches
@@ -44,18 +54,7 @@ fn main() {
 
     let use_name = matches.get_flag("name");
     let use_pet = matches.get_flag("pet");
+    let use_tmp = matches.get_flag("tmp");
 
-    make_dir(depth, length, use_name, use_pet);
+    make_dir(depth, length, use_name, use_pet, use_tmp);
 }
-
-
-
-
-
-        
-
-        
-
-        
-
-        
