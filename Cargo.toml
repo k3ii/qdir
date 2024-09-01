@@ -2,6 +2,14 @@
 name = "qdir"
 version = "0.1.0"
 edition = "2021"
+authors = ["Jain Ramchurn"]
+description = "A quick directory generator"
+license-file = "LICENSE"
+repository = "https://github.com/k3ii/qdir"
+homepage = "https://github.com/k3ii/qdir"
+readme = "README.md"
+keywords = ["cli"]
+categories = ["cli"]
 
 [dependencies]
 clap = { version = "4.5.16", features = ["derive", "cargo"] }
