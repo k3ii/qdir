@@ -9,7 +9,7 @@ repository = "https://github.com/k3ii/qdir"
 homepage = "https://github.com/k3ii/qdir"
 readme = "README.md"
 keywords = ["cli"]
-categories = ["cli"]
+categories = ["command-line-utilities"]
 
 [dependencies]
 clap = { version = "4.5.16", features = ["derive", "cargo"] }
