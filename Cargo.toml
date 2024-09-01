@@ -1,6 +1,6 @@
 [package]
 name = "qdir"
-version = "0.0.1-rc.1"
+version = "0.0.1-rc.2"
 edition = "2021"
 authors = ["Jain Ramchurn"]
 description = "A quick directory generator"
