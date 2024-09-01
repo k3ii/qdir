@@ -1,4 +1,5 @@
 # qdir - Quick Directory Creator
+
 `qdir` is a command-line tool for creating directories with randomly generated names. It's useful when you need a quick directory without thinking about names.
 
 ## Features
@@ -9,11 +10,13 @@
 - Use system temp directory or current working directory
 
 ## Usage
+
 Basic: `qdir`
 
 With options: qdir [options]
 
 ## Options
+
 - `-d, --depth <depth>`    Set depth for nested directories
 - `-l, --length <length>`  Set length for random string
 - `-n, --name`             Use names instead of random string
@@ -21,3 +24,19 @@ With options: qdir [options]
 - `-t, --tmp`              Use the system's temporary directory
 - `-h, --help`             Print help
 - `-V, --version`          Print version
+
+## Installation
+
+You can install `qdir` using `cargo`:
+
+```sh
+cargo install qdir
+```
+
+Or using `brew`:
+
+```sh
+brew install k3ii/tap/qdir
+```
+
+**Check the [release page](https://github.com/k3ii/qdir/releases) to install the pre-built binaries.**
