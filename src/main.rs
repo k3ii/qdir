@@ -1,4 +1,4 @@
-use clap::{command, Arg, ArgGroup};
+use clap::{command, Arg};
 use qdir::make_dir;
 
 fn main() {
@@ -40,11 +40,6 @@ fn main() {
                 .long("tmp")
                 .action(clap::ArgAction::SetTrue)
                 .help("Use the system's temporary directory"),
-        )
-        .group(
-            ArgGroup::new("name_or_pet_length")
-                .args(&["name", "pet", "length"])
-                .required(false),
         )
         .get_matches();
 
