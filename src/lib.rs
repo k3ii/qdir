@@ -39,12 +39,4 @@ pub fn make_dir(depth: u8, name_length: usize, name: bool, pet: bool, tmp: bool)
     fs::create_dir_all(&path).expect("Failed to create directory");
 
     println!("{}", path.display());
-
-    let name = get_random_name().unwrap_or_else(|| String::from("default_name"));
-    let pet = get_random_pet()
-        .unwrap_or_else(|| "default_pet")
-        .to_string();
-
-    println!("Name: {}", name);
-    println!("Pet: {}", pet);
 }
