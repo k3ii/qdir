@@ -40,3 +40,15 @@ brew install k3ii/tap/qdir
 ```
 
 **Check the [release page](https://github.com/k3ii/qdir/releases) to install the pre-built binaries.**
+
+## Contributing
+
+Contributions to Qdir are welcome! Please feel free to submit a Pull Request.
+
+## Acknowledgments
+
+* Inspired by Docker's naming generator for containers
+* Thanks to all the scientists and technologists whose names are used in this project
+
+## Support
+If you encounter any problems or have any questions, please open an issue on the GitHub repository.
