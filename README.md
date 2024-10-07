@@ -2,6 +2,8 @@
 
 `qdir` is a command-line tool for creating directories with randomly generated names. It's useful when you need a quick directory without thinking about names.
 
+![qdir demo](./assets/qdir.gif)
+
 ## Features
 
 - Create directories with random alphanumeric names
